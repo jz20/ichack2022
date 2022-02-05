@@ -33,5 +33,3 @@ def get_sentiment(sentence):
     top_emotions = [emotion for (emotion, score) in ranked if score == top_score]
 
     return random.choice(top_emotions)
-
-print(get_sentiment('467,000 jobs added, shattering expectations. Yesterday, virtually every outlet was projecting abysmal — maybe even negative — job numbers.'))
