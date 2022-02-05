@@ -2,7 +2,7 @@ import random
 
 def get_sentiment(sentence):
 
-    file = open('data.txt')
+    file = open('../data.txt')
 
     lines = file.readlines()
 
