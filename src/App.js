@@ -15,12 +15,8 @@ function App() {
   const [text, setText] = useState("");
   const [playlist, setPlaylist] = useState("6PESRz1MZWlElXYHkTAvqB");
 
-  const doSubmit = async (event) => {
-    console.log("Got text");
-    event.preventDefault();
-    const formData = new FormData(event.target);
-    const text = formData.get("textarea");
-    console.log(text);
+  async function getPlaylist(t)  {
+    console.log("Got text: " , t);
 
     window.fetch(global.api_base_url + '/api/get_playlist',{
       method: 'POST',
@@ -29,7 +25,7 @@ function App() {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-      'sentence': text
+      'sentence': t
       })
     }
     ).then(res => res.json() ).then(
@@ -61,12 +57,12 @@ function App() {
         <Typography font="arima-madurai" variant="h1">
             Hello!
         </Typography>
-        <form onSubmit={doSubmit}>
+        <form>
         <label>
           <br></br>
           <TextField label="How was your day?" variant="outlined" type="text" name="textarea" value={text} onChange={(event) => setText(event.target.value)}/>
         </label>
-        <Button variant="outlined">Find my playlist</Button>
+        <Button onClick={() => getPlaylist(text)} variant="outlined">Find my playlist</Button>
       </form>
       </span>
       <br></br>

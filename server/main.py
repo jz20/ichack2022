@@ -60,6 +60,16 @@ def get_sentiment(sentence):
 
     return random.choice(top_emotions)
 
+def get_sentiment_songs(sentiment):
+    result = sp.search(q= sentiment)
+    for i in range(10):
+        list_of_songs.append(result['tracks']['items'][i]['id'])
+    return list_of_songs
+
+def sentiment_to_list(username, playlist_id, items, position=None):
+    sp.playlist_replace_items(playlist_id= playlist_id, items= items)
+    return playlist_id
+
 
 @app.route('/')
 def index():
@@ -71,10 +81,12 @@ def get_playlist():
     request_data = request.get_json()
 
     sentence = request_data['sentence']
-
+    print(sentence)
     sentiment = get_sentiment(sentence)
-
-    playlist_id = get_sentiment_songs(sentiment)
+    print(sentiment)
+    items = get_sentiment_songs(sentiment)
+    print(items)
+    playlist_id = sentiment_to_list(username, SENTIMENT_TO_PLAYLIST[sentiment], items)
 
     return jsonify({"playlist_id": playlist_id})
 
