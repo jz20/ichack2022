@@ -33,6 +33,24 @@ html {
   color: #61dafb;
 }
 
+#appTitle {
+  color: white;
+  font-weight: 500;
+}
+
+TextField {
+  color: white;
+  outline-color: white;
+}
+
+Button {
+  outline-width: 10px;
+}
+
+Spotify {
+  width: 50%;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

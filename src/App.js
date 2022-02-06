@@ -54,19 +54,30 @@ function App() {
                       }}
       >
       <span className="h1">
-        <Typography font="arima-madurai" variant="h1">
-            Hello!
+        <Typography id="appTitle" font="arima-madurai" variant="h1">
+            BigFeels.io
         </Typography>
         <form>
         <label>
           <br></br>
-          <TextField label="How was your day?" variant="outlined" type="text" name="textarea" value={text} onChange={(event) => setText(event.target.value)}/>
+          <TextField 
+          label="How was your day?" 
+          multiline
+          sx = {{width: "400px",
+                margin: "20px, 20px, 20px, 20px"}}
+          variant="outlined" type="text" name="textarea" value={text} onChange={(event) => setText(event.target.value)}/>
         </label>
-        <Button onClick={() => getPlaylist(text)} variant="outlined">Find my playlist</Button>
+        <Button 
+        onClick={() => getPlaylist(text)} 
+        variant="outlined"
+        sx = {{padding: "20px, 20px, 20px, 20px"}}
+        >Find my playlist</Button>
       </form>
       </span>
       <br></br>
-      <Spotify link={`https://open.spotify.com/playlist/${playlist}?si=3db00481f37344fe`}/>
+      <Spotify 
+      sx = {{width: "500px"}}
+      link={`https://open.spotify.com/playlist/${playlist}?si=3db00481f37344fe`}/>
       </Box>
   </section>
   );
