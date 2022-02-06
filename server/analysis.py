@@ -33,3 +33,9 @@ def get_sentiment(sentence):
     top_emotions = [emotion for (emotion, score) in ranked if score == top_score]
 
     return random.choice(top_emotions)
+
+
+if __name__ == '__main__':
+    emotion = get_sentiment('abacus nice')
+
+    print('FINAL EMOTION: ', emotion)

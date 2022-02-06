@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+global.api_base_url = 'http://localhost:8081'
 ReactDOM.render(
   <React.StrictMode>
     <App />
