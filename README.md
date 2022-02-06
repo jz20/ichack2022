@@ -1,6 +1,12 @@
 # SentiTunes
 
-
+## Run 
+```
+npm install 
+npm run build
+cd server
+python main.py
+```
 
 ## This product makes use of the NRC Emotion Lexicon, created by Saif Mohammad and Peter Turney at the National Research Council Canada
 
@@ -16,10 +22,4 @@
     
     Saif Mohammad and Peter Turney (2010). Emotions Evoked by Common Words and Phrases: Using Mechanical Turk to Create an Emotion Lexicon, In Proceedings of the NAACL-HLT 2010 Workshop on Computational Approaches to Analysis and Generation of Emotion in Text, June 2010, LA, California.
     
-## Run 
-```
-npm install 
-npm run build
-cd server
-python main.py
-```
+
