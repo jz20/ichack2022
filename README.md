@@ -1,5 +1,6 @@
 # SentiTunes
 ![stress](https://user-images.githubusercontent.com/81494714/152678401-0e75b3f1-106d-4460-89a8-3d21b744f639.png)
+https://youtu.be/ytTwkFW4MUA
 
 ## Inspiration
 With the pandemic and lockdown, mental health has been an issue for a lot of people. As getting professional help might take a while, we've created a web app that will help people navigate their emotions and provide comfort to them through music tailored to their current feelings. 
