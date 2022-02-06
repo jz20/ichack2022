@@ -66,7 +66,7 @@ function App() {
                 margin: "40px 0 0 0",
             }}
          >
-          <TextField inputProps={{ style: { color: 'white'}}} className="TextField" label="How was your day?" variant="outlined" type="text" name="textarea" value={text} onChange={(event) => setText(event.target.value)}/>
+          <TextField multiline inputProps={{ style: { color: 'white'}}} className="TextField" label="How was your day?" variant="outlined" type="text" name="textarea" value={text} onChange={(event) => setText(event.target.value)}/>
         <Button className="Button" onClick={() => getPlaylist(text)} variant="outlined">Find my playlist</Button>
         </Box>
       </form>
