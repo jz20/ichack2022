@@ -2,6 +2,12 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from "react";
 import Spotify from 'react-spotify-embed';
+import { Button } from "@mui/material";
+import { TextField } from "@mui/material";
+import { Typography } from "@mui/material";
+import { Box } from "@mui/material";
+import "@fontsource/arima-madurai";
+
 
 
 function App() {
@@ -36,19 +42,36 @@ function App() {
 
   return (
   <section>
+
+      <Box
+       sx={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        p: 1,
+                        m: 1,
+                        bgcolor: 'background.paper',
+                        borderRadius: 1,
+                        justifyContent: 'space-between',
+                        margin: "200px 200px 0 200px",
+                        backgroundColor: "transparent",
+
+                      }}
+      >
       <span className="h1">
-        Hello
+        <Typography font="arima-madurai" variant="h1">
+            Hello!
+        </Typography>
         <form onSubmit={doSubmit}>
         <label>
-          How was your day?
           <br></br>
-          <input type="text" name="textarea" value={text} onChange={(event) => setText(event.target.value)}/>
+          <TextField label="How was your day?" variant="outlined" type="text" name="textarea" value={text} onChange={(event) => setText(event.target.value)}/>
         </label>
-        <button>Find my playlist</button>
+        <Button variant="outlined">Find my playlist</Button>
       </form>
       </span>
       <br></br>
       <Spotify link={`https://open.spotify.com/playlist/${playlist}?si=3db00481f37344fe`}/>
+      </Box>
   </section>
   );
 }
