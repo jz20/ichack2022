@@ -55,8 +55,8 @@ function App() {
                       }}
       >
       <span className="h1">
-        <Typography font="arima-madurai" variant="h1" color="white">
-            Hello!
+        <Typography font="arima-madurai" variant="h1" color="white" weight="50px">
+            Hello from SentiTunes!
         </Typography>
         <form>
         <Box
