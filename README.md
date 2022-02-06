@@ -24,6 +24,9 @@ It has been a great experience and chance to learn how to work together as a tea
 ## What's next for SentiTunes
 We will personalise the playlists to the user's music taste so it feels more tailored to them. We will also use machine learning to train a better model to give a more comprehensive sentiment analysis. We think that a simple therapy chat bot will also improve user experience by a lot. 
 
+## Built with
+python, flask, spotipy, React, css
+
 ## Run 
 ```
 npm install 
