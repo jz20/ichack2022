@@ -121041,9 +121041,9 @@ strenuous	trust	0
 stress	anger	0
 stress	anticipation	0
 stress	disgust	0
-stress	fear	0
+stress	fear	1
 stress	joy	0
-stress	negative	1
+stress	negative	0
 stress	positive	0
 stress	sadness	0
 stress	surprise	0
