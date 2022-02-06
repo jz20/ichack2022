@@ -29,6 +29,22 @@ html {
   color: white;
 }
 
+.Spotify{
+    margin-top: -150px;
+    height: 600px;
+    width: 500px;
+}
+
+.Button{
+    margin-left: 50px !important;
+    height: 50px;
+}
+
+
+.TextField{
+    width: 300px;
+}
+
 .App-link {
   color: #61dafb;
 }

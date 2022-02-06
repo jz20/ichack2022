@@ -13,7 +13,8 @@ import "@fontsource/arima-madurai";
 function App() {
 
   const [text, setText] = useState("");
-  const [playlist, setPlaylist] = useState("6PESRz1MZWlElXYHkTAvqB");
+  const [playlist, setPlaylist] = useState("6t8MZHGhGyQ8vmT9lBTJYg");
+
 
   async function getPlaylist(t)  {
     console.log("Got text: " , t);
@@ -54,19 +55,24 @@ function App() {
                       }}
       >
       <span className="h1">
-        <Typography font="arima-madurai" variant="h1">
+        <Typography font="arima-madurai" variant="h1" color="white">
             Hello!
         </Typography>
         <form>
-        <label>
-          <br></br>
-          <TextField label="How was your day?" variant="outlined" type="text" name="textarea" value={text} onChange={(event) => setText(event.target.value)}/>
-        </label>
-        <Button onClick={() => getPlaylist(text)} variant="outlined">Find my playlist</Button>
+        <Box
+         sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                margin: "40px 0 0 0",
+            }}
+         >
+          <TextField inputProps={{ style: { color: 'white'}}} className="TextField" label="How was your day?" variant="outlined" type="text" name="textarea" value={text} onChange={(event) => setText(event.target.value)}/>
+        <Button className="Button" onClick={() => getPlaylist(text)} variant="outlined">Find my playlist</Button>
+        </Box>
       </form>
       </span>
       <br></br>
-      <Spotify link={`https://open.spotify.com/playlist/${playlist}?si=3db00481f37344fe`}/>
+      <Spotify className="Spotify" link={`https://open.spotify.com/playlist/${playlist}?si=3db00481f37344fe`}/>
       </Box>
   </section>
   );

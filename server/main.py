@@ -81,11 +81,8 @@ def get_playlist():
     request_data = request.get_json()
 
     sentence = request_data['sentence']
-    print(sentence)
     sentiment = get_sentiment(sentence)
-    print(sentiment)
     items = get_sentiment_songs(sentiment)
-    print(items)
     playlist_id = sentiment_to_list(username, SENTIMENT_TO_PLAYLIST[sentiment], items)
 
     return jsonify({"playlist_id": playlist_id})
